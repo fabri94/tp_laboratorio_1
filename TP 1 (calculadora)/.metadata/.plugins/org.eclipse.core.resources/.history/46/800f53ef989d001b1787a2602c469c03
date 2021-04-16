@@ -1,0 +1,71 @@
+/*
+ * funciones.c
+ *
+ *  Created on: 14 abr. 2021
+ *      Author: Fabri
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "funciones.h"
+
+float pedirNumero()
+{
+    float numeroIngresado;
+    printf("Ingrese el numero por favor: \n");
+    scanf("%f",&numeroIngresado);
+    return numeroIngresado;
+}
+
+float sumar(float a, float b)
+{
+    float resultado;
+    resultado=a+b;
+
+    return resultado;
+}
+
+float restar(float a, float b)
+{
+    float resultado;
+    resultado=a-b;
+
+    return resultado;
+}
+
+float dividir(float a, float b)
+{
+    float resultado;
+    resultado=a/b;
+
+    return resultado;
+}
+
+float multiplicar(float a, float b)
+{
+    float resultado;
+    resultado=a*b;
+
+    return resultado;
+}
+double factorial(float a)
+{
+    int numero=(int)a;
+    double resultado;
+    if(numero<0)
+    {
+        resultado=0;
+    }else
+    {
+        resultado=1;
+        if(a>1)
+        {
+            for(int i=numero;i>=1;i--)
+            {
+               resultado=resultado*i;
+            }
+        }
+    }
+    return resultado;
+}
